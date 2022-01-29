@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var particleSystem = ParticleSystem()
+    @State private var motionHandler = MotionManager()
     @State private var spartColor = Color.blue
     
     let options: [(flipX: Bool, flipY: Bool)] = [
@@ -23,6 +24,9 @@ struct ContentView: View {
             Canvas { context, size in
                 let timelineDate = timeline.date.timeIntervalSinceReferenceDate
                 particleSystem.update(date: timelineDate)
+                
+                // Update coordinate state when using device tilt
+                particleSystem.center = UnitPoint(x: 0.5 + motionHandler.roll, y: 0.5 + motionHandler.pitch)
                 
                 context.blendMode = .plusLighter
                 //context.blendMode = .plusDarker

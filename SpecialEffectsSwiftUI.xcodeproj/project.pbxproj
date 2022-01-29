@@ -13,6 +13,7 @@
 		DC0F66DB27A5BC0D0081084F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC0F66DA27A5BC0D0081084F /* Preview Assets.xcassets */; };
 		DC0F66E227A5BFBC0081084F /* Particle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0F66E127A5BFBC0081084F /* Particle.swift */; };
 		DC0F66E427A5C0A10081084F /* ParticleSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0F66E327A5C0A10081084F /* ParticleSystem.swift */; };
+		DC0F66E627A5D44B0081084F /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0F66E527A5D44B0081084F /* MotionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		DC0F66DA27A5BC0D0081084F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DC0F66E127A5BFBC0081084F /* Particle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Particle.swift; sourceTree = "<group>"; };
 		DC0F66E327A5C0A10081084F /* ParticleSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticleSystem.swift; sourceTree = "<group>"; };
+		DC0F66E527A5D44B0081084F /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				DC0F66D927A5BC0D0081084F /* Preview Content */,
 				DC0F66E127A5BFBC0081084F /* Particle.swift */,
 				DC0F66E327A5C0A10081084F /* ParticleSystem.swift */,
+				DC0F66E527A5D44B0081084F /* MotionManager.swift */,
 			);
 			path = SpecialEffectsSwiftUI;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC0F66E427A5C0A10081084F /* ParticleSystem.swift in Sources */,
+				DC0F66E627A5D44B0081084F /* MotionManager.swift in Sources */,
 				DC0F66D627A5BC0B0081084F /* ContentView.swift in Sources */,
 				DC0F66E227A5BFBC0081084F /* Particle.swift in Sources */,
 				DC0F66D427A5BC0B0081084F /* SpecialEffectsSwiftUIApp.swift in Sources */,
