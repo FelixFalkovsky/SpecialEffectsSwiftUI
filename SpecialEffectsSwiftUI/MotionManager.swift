@@ -8,7 +8,7 @@
 import CoreMotion
 
 class MotionManager {
-    
+   
     // Update coordinate state when using device tilt
     //private var motionManager = CMMotionManager()
     
