@@ -10,6 +10,14 @@ import SwiftUI
 struct ContentView: View {
     @State private var particleSystem = ParticleSystem()
     @State private var spartColor = Color.blue
+    
+    let options: [(flipX: Bool, flipY: Bool)] = [
+        (false, false),
+        (true, false),
+        (false, true),
+        (true, true)
+    ]
+    
     var body: some View {
         TimelineView(.animation) { timeline in
             Canvas { context, size in
@@ -21,15 +29,25 @@ struct ContentView: View {
                 //context.addFilter(.colorMultiply(.blue))
                 
                 for particle in particleSystem.particles {
-                    let xPos = particle.x * size.width
-                    let yPos = particle.y * size.height
-                    
                     var contextCopy = context
                     contextCopy.addFilter(.colorMultiply(Color(hue: particle.hue, saturation: 1, brightness: 1)))
                     
                     contextCopy.opacity = 1 - (timelineDate - particle.creationDate)
-                    contextCopy.draw(particleSystem.image, at: CGPoint(x: xPos, y: yPos))
                     
+                    for option in options {
+                        var xPos = particle.x * size.width
+                        var yPos = particle.y * size.height
+                        
+                        if option.flipX {
+                            xPos = size.width - xPos
+                        }
+                        
+                        if option.flipY {
+                            yPos = size.height - yPos
+                        }
+                        
+                        contextCopy.draw(particleSystem.image, at: CGPoint(x: xPos, y: yPos))
+                    }
                 }
             }
         }
