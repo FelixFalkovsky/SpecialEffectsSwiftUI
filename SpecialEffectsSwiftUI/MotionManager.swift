@@ -8,7 +8,14 @@
 import CoreMotion
 
 class MotionManager {
-    private var motionManager = CMMotionManager()
+    
+    // Update coordinate state when using device tilt
+    //private var motionManager = CMMotionManager()
+    
+   // Update the state of the coordinates without changing the location of the device
+   // For testing, you need to wear AirPods
+    private var motionManager = CMHeadphoneMotionManager()
+    
     var pitch = 0.0
     var roll = 0.0
     var yaw = 0.0
